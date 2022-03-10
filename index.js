@@ -134,13 +134,13 @@ instagram, link3, link2, link1, ownername, botname } = setting
 			if (nay.key.fromMe) return
 			}					
 			if (nay.key && nay.key.remoteJid == 'status@broadcast') return 
-			const cmd = (type === 'conversation' && nay.message.conversation) ? nay.message.conversation : (type == 'imageMessage') && nay.message.imageMessage.caption ? nay.message.imageMessage.caption : (type == 'videoMessage') && nay.message.videoMessage.caption ? nay.message.videoMessage.caption : (type == 'extendedTextMessage') && nay.message.extendedTextMessage.text ? nay.message.extendedTextMessage.text : ''.slice(1).trim().split(/ +/).shift().toLowerCase()
-            const prefix = /^[°•π÷×¶∆£¢€¥®™=|~!#$%^&.?/\\©^z+*@,;]/.test(cmd) ? cmd.match(/^[°•π÷×¶∆£¢€¥®™=|~!#$%^&.?/\\©^z+*,;]/gi) : '-'          	       
 			global.prefix
 			global.blocked
 			const content = JSON.stringify(nay.message)
 			const from = nay.key.remoteJid
 			const type = Object.keys(nay.message)[0]
+			const cmd = (type === 'conversation' && nay.message.conversation) ? nay.message.conversation : (type == 'imageMessage') && nay.message.imageMessage.caption ? nay.message.imageMessage.caption : (type == 'videoMessage') && nay.message.videoMessage.caption ? nay.message.videoMessage.caption : (type == 'extendedTextMessage') && nay.message.extendedTextMessage.text ? nay.message.extendedTextMessage.text : ''.slice(1).trim().split(/ +/).shift().toLowerCase()
+            const prefix = /^[°•π÷×¶∆£¢€¥®™=|~!#$%^&.?/\\©^z+*@,;]/.test(cmd) ? cmd.match(/^[°•π÷×¶∆£¢€¥®™=|~!#$%^&.?/\\©^z+*,;]/gi) : '-'          	       				
 			const apiKey = setting.apiKey 
 			const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
 			const time = moment.tz('Asia/Jakarta').format('DD/MM HH:mm:ss')
@@ -262,15 +262,15 @@ instagram, link3, link2, link1, ownername, botname } = setting
 			const randomnay2 = angka[Math.floor(Math.random() * (angka.length))]			
 			/* <==============[ BUTTONS ]===============> */
 			buttonsR = (type === 'buttonsResponseMessage') ? nay.message.buttonsResponseMessage.selectedDisplayText : '' || ''
-			if (buttonsR === 'INFO-BOT') {	
+			if (buttonsR === 'INFOBOT') {	
 			info3 = infobot(botname, ownername, ownerNumber, prefix)
 		    sendB1(info3, "BACK")
 			}
-			if (buttonsR === 'INFO-OWNER') {
+			if (buttonsR === 'OWNER INGFO') {
 			info4 = infoow(ownername, instagram, youtube, tiktok, twitter, facebook, asal, umur, agama, gender)
 		    sendB1(info4, "BACK")
 			}
-			if (buttonsR === 'CHAT-OWNER') {
+			if (buttonsR === 'OWNER') {
 			reply(`Command ${prefix}chat <pesan kamu>` + "\n" + `Contoh ${prefix}chat halo kak`)
 			}
 			if (buttonsR === 'LIST LANGUAGE') {
