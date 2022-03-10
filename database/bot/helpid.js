@@ -1,11 +1,19 @@
-const helpid = (prefix, botname, ownername, codename, arts) => {
+const helpid = (prefix, botname, ownername, codename, arts, readmore) => {
 	return `☞ MENU ${botname} ☜
 
 Halo kak ${codename}.👋
 berikut adalah menu *${botname}*
 ==================
 ${arts}
-==================
+
+======[JOIN]=======
+
+>https://chat.whatsapp.com/HUB4Ql3BI4fDbG1mQXNlMY
+
+>https://chat.whatsapp.com/DZf52GZI0yUA4izbhsjLqa
+
+>https://chat.whatsapp.com/KTm4p53s6457qcV5aDOAPI
+${readmore}
 ☞ *BAHASA* [ 2 ]
 ⍟ *${prefix}setbahasa* id
 ⍟ *${prefix}setlanguage* en
@@ -382,7 +390,8 @@ Contohnya *${prefix}audio8*
 ⍟ *LORD RIYAN*
 ⍟ *LOLKILLERS*
 ⍟ *ADIWAJSHING*
-⍟ *WHATSAPP*`
+⍟ *WHATSAPP*
+⍟ *RamaGans*`
 }
 
 exports.helpid = helpid
